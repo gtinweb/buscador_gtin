@@ -1,0 +1,528 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 1.1rem;
+    line-height: 1.5;
+
+    color: #20242a;
+    background: #e7eaed;
+}
+
+
+/* ---------------------------------------------------------
+   Application
+   --------------------------------------------------------- */
+
+main {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.5rem;
+}
+
+.app {
+    width: min(100%, 44rem);
+
+    padding: 2rem;
+
+    background: #f7f8f9;
+
+    border: 1px solid #d4d8dc;
+    border-radius: 1rem;
+
+    box-shadow: 0 0.5rem 2rem rgb(0 0 0 / 8%);
+}
+
+h1 {
+    margin: 0 0 2rem;
+
+    font-size: 2rem;
+    font-weight: 650;
+    line-height: 1.1;
+}
+
+
+/* ---------------------------------------------------------
+   Search
+   --------------------------------------------------------- */
+
+label {
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.search {
+    display: flex;
+    gap: 0.75rem;
+}
+
+input {
+    min-width: 0;
+    flex: 1;
+
+    padding: 0.85rem 1rem;
+
+    font: inherit;
+    font-size: 1.2rem;
+
+    color: inherit;
+    background: #fff;
+
+    border: 1px solid #b9bec5;
+    border-radius: 0.6rem;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #59636e;
+
+    box-shadow:
+        0 0 0 3px rgb(89 99 110 / 15%);
+}
+
+button {
+    padding: 0.85rem 1.25rem;
+
+    font: inherit;
+    font-weight: 600;
+
+    color: #fff;
+    background: #303740;
+
+    border: 0;
+    border-radius: 0.6rem;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #20262d;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+
+/* ---------------------------------------------------------
+   Result
+   --------------------------------------------------------- */
+
+#result {
+    margin-top: 2rem;
+
+    padding-top: 1.5rem;
+
+    border-top: 1px solid #d4d8dc;
+}
+
+#product-name {
+    margin: 0 0 1.25rem;
+
+    font-size: 1.45rem;
+    font-weight: 650;
+    line-height: 1.25;
+}
+
+
+/* ---------------------------------------------------------
+   Data table
+   --------------------------------------------------------- */
+
+.product-data {
+    width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 1rem 0.45rem;
+
+    margin: -0.45rem -1rem;
+}
+
+.product-data th,
+.product-data td {
+    padding: 0;
+
+    vertical-align: baseline;
+}
+
+.product-data th {
+    width: 35%;
+
+    text-align: right;
+
+    font-weight: 600;
+    color: #59636e;
+}
+
+.product-data td {
+    text-align: left;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ---------------------------------------------------------
+   Country / region icons
+   --------------------------------------------------------- */
+
+[class^="ico-"],
+[class*=" ico-"] {
+    display: inline-block;
+
+    width: 1.5rem;
+    height: 1rem;
+
+    margin-right: 0.4rem;
+
+    flex: 0 0 auto;
+
+    vertical-align: -0.1em;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/* ---------------------------------------------------------
+   Countries
+   --------------------------------------------------------- */
+
+.countries {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.4rem 0.8rem;
+}
+
+.country {
+    display: inline-flex;
+    align-items: center;
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   GS1 warning
+   --------------------------------------------------------- */
+
+.warning {
+    margin: 1.5rem 0 0;
+
+    padding: 0.75rem 1rem;
+
+    font-size: 0.95rem;
+
+    color: #5f4d20;
+    background: #f5eed8;
+
+    border-left: 3px solid #c6a84b;
+    border-radius: 0.35rem;
+}
+
+
+/* ---------------------------------------------------------
+   Messages
+   --------------------------------------------------------- */
+
+.error {
+    color: #9b2424;
+}
+
+
+/* ---------------------------------------------------------
+   Landscape / desktop
+   --------------------------------------------------------- */
+
+@media (orientation: landscape) and (min-width: 700px) {
+
+    main {
+        padding: 2rem;
+    }
+
+    .app {
+        padding: 2.5rem;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Portrait / mobile
+   --------------------------------------------------------- */
+
+@media (orientation: portrait) and (max-width: 699px) {
+
+    main {
+        align-items: flex-start;
+
+        padding: 1rem;
+    }
+
+    .app {
+        margin-top: 1rem;
+
+        padding: 1.5rem;
+
+        border-radius: 0.8rem;
+    }
+
+    h1 {
+        margin-bottom: 1.5rem;
+
+        font-size: 1.8rem;
+    }
+
+    .search {
+        flex-direction: column;
+    }
+
+    input,
+    button {
+        width: 100%;
+        min-height: 3.25rem;
+    }
+
+    .product-data {
+        border-spacing: 0.7rem 0.45rem;
+    }
+
+    .product-data th {
+        width: 40%;
+    }
+}
+
+/* ---------------------------------------------------------
+   Banderas
+   --------------------------------------------------------- */
+
+.ico-es {
+    background-image: url("flags/es.svg");
+}
+
+.ico-fr {
+    background-image: url("flags/fr.svg");
+}
+
+.ico-de {
+    background-image: url("flags/de.svg");
+}
+
+.ico-it {
+    background-image: url("flags/it.svg");
+}
+
+.ico-pt {
+    background-image: url("flags/pt.svg");
+}
+
+.ico-be {
+    background-image: url("flags/be.svg");
+}
+
+.ico-nl {
+    background-image: url("flags/nl.svg");
+}
+
+.ico-lu {
+    background-image: url("flags/lu.svg");
+}
+
+.ico-ch {
+    background-image: url("flags/ch.svg");
+}
+
+.ico-at {
+    background-image: url("flags/at.svg");
+}
+
+.ico-gb {
+    background-image: url("flags/gb.svg");
+}
+
+.ico-ie {
+    background-image: url("flags/ie.svg");
+}
+
+.ico-dk {
+    background-image: url("flags/dk.svg");
+}
+
+.ico-se {
+    background-image: url("flags/se.svg");
+}
+
+.ico-no {
+    background-image: url("flags/no.svg");
+}
+
+.ico-fi {
+    background-image: url("flags/fi.svg");
+}
+
+.ico-pl {
+    background-image: url("flags/pl.svg");
+}
+
+.ico-cz {
+    background-image: url("flags/cz.svg");
+}
+
+.ico-sk {
+    background-image: url("flags/sk.svg");
+}
+
+.ico-hu {
+    background-image: url("flags/hu.svg");
+}
+
+.ico-ro {
+    background-image: url("flags/ro.svg");
+}
+
+.ico-bg {
+    background-image: url("flags/bg.svg");
+}
+
+.ico-hr {
+    background-image: url("flags/hr.svg");
+}
+
+.ico-si {
+    background-image: url("flags/si.svg");
+}
+
+.ico-ba {
+    background-image: url("flags/ba.svg");
+}
+
+.ico-me {
+    background-image: url("flags/me.svg");
+}
+
+.ico-gr {
+    background-image: url("flags/gr.svg");
+}
+
+.ico-pt {
+    background-image: url("flags/pt.svg");
+}
+
+.ico-ru {
+    background-image: url("flags/ru.svg");
+}
+
+.ico-ua {
+    background-image: url("flags/ua.svg");
+}
+
+.ico-cn {
+    background-image: url("flags/cn.svg");
+}
+
+.ico-jp {
+    background-image: url("flags/jp.svg");
+}
+
+.ico-kr {
+    background-image: url("flags/kr.svg");
+}
+
+.ico-in {
+    background-image: url("flags/in.svg");
+}
+
+.ico-tr {
+    background-image: url("flags/tr.svg");
+}
+
+.ico-il {
+    background-image: url("flags/il.svg");
+}
+
+.ico-hk {
+    background-image: url("flags/hk.svg");
+}
+
+.ico-us {
+    background-image: url("flags/us.svg");
+}
+
+.ico-ca {
+    background-image: url("flags/ca.svg");
+}
+
+.ico-mx {
+    background-image: url("flags/mx.svg");
+}
+
+.ico-br {
+    background-image: url("flags/br.svg");
+}
+
+.ico-ar {
+    background-image: url("flags/ar.svg");
+}
+
+.ico-cl {
+    background-image: url("flags/cl.svg");
+}
+
+.ico-co {
+    background-image: url("flags/co.svg");
+}
+
+.ico-pe {
+    background-image: url("flags/pe.svg");
+}
+
+.ico-uy {
+    background-image: url("flags/uy.svg");
+}
+
+.ico-ve {
+    background-image: url("flags/ve.svg");
+}
+
+.ico-au {
+    background-image: url("flags/au.svg");
+}
+
+.ico-ad {
+    background-image: url("flags/ad.svg");
+}
+
+.ico-nz {
+    background-image: url("flags/nz.svg");
+}
+
+.ico-00 {
+    background-image: url("flags/00.svg");
+}

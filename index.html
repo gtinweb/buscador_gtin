@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Procedencia</title>
+
+    <meta
+        name="description"
+        content="Consulta la procedencia de un producto mediante su código de barras."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<main>
+
+    <section class="app">
+
+        <h1>Procedencia</h1>
+
+
+<form id="barcode-form">
+
+    <input
+        id="barcode"
+        type="number"
+        inputmode="numeric"
+        pattern="[0-9]*"
+        maxlength="14"
+        placeholder="Código de barras"
+        autocomplete="off"
+        aria-label="Código de barras"
+    >
+
+    <button type="submit">
+        Consultar
+    </button>
+
+    <button
+        type="button"
+        id="scan-button"
+        hidden
+    >
+        Escanear
+    </button>
+
+</form>
+
+
+        <div id="result" hidden>
+
+            <h2 id="product-name"></h2>
+
+
+            <table class="product-data">
+
+                <tbody>
+
+                    <tr>
+                        <th>GTIN</th>
+                        <td id="product-code"></td>
+                    </tr>
+
+
+                    <tr>
+                        <th>Organización GS1</th>
+                        <td id="gs1-organisation"></td>
+                    </tr>
+
+
+                    <tr>
+                        <th>Marca</th>
+                        <td id="product-brand"></td>
+                    </tr>
+
+
+                    <tr>
+                        <th>Países de venta</th>
+                        <td id="product-countries"></td>
+                    </tr>
+
+
+                    <tr>
+                        <th>Origen</th>
+                        <td id="product-origins"></td>
+                    </tr>
+
+
+                    <tr>
+                        <th>Fabricación</th>
+                        <td id="product-manufacturing"></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+            <p
+                id="gs1-warning"
+                class="warning"
+                hidden
+            >
+                El país de asignación del GTIN no indica
+                necesariamente el país de fabricación.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="paises.js"></script>
+<script src="gs1-prefixes.js"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>
