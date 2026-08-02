@@ -1,6 +1,6 @@
 Miniproyectito a partir de una idea de @Idoia28299937 en twit... equis, o como se llame ahora. 
 
-Habla de boicotear a un país concreto, y se basa en si el código de barras empieza por tal o cual número. 
+Habla de boicotear a un país concreto (y en el momento político actual, estoy bastante de acuerdo, de hecho llevo estándolo desde que las naranjas valencianas se iban a la basura en la frontera norte y mientras se importaban las de la frontera sur), y se basa en si el código de barras empieza por tal o cual número. 
 
 El problema es que igual no nos acordamos del número o queremos saber algo más... y sobretodo, el problema es que los números de los códigos de barras indican el país que ha gestionado ese código de barras, NO el país del producto, ni el del fabricante, ni el de las materias primas... Que sí, que NORMALMENTE será el prefijo, pues empieza por 84 es español, sí... NORMALMENTE. Porque imagina que un alemán ha venido a España y quiere vendernos strudels, si el tío se monta una empresa aquí para importar los strudels de alemania, fabricados en alemania con manzanas francesas y azúcar ecuatoriano... pues el tío registra en España el código de barras con que va a llevarlo a los supermercados españoles y ya está, ya tiene un código de barras que empieza por 84. 
 
